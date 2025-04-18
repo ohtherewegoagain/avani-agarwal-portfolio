@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avani Agarwal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f1117, #1c1f2b);
+      color: #eaeaea;
+      line-height: 1.6;
+    }
+    header, footer {
+      background: linear-gradient(to right, #1a1d29, #222634);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #91d2ff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #f06292; }
+    .hero {
+      padding: 6rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #1c1f2b, #343a50);
+      animation: fadeIn 1s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #e040fb, #00bcd4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 720px;
+      margin: 0 auto;
+      color: #dbeafe;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: slideIn 0.8s ease-in-out;
+    }
+    h2 {
+      color: #7ecfff;
+      margin-bottom: 2rem;
+      font-size: 2.25rem;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #f06292;
+      margin-top: 0.5rem;
+    }
+    .card {
+      background: linear-gradient(145deg, #1f2436, #252c44);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 40px rgba(255,255,255,0.1);
+    }
+    footer a {
+      color: #91d2ff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover { color: #f06292; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+<style>
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: linear-gradient(135deg, #1e2433, #2c3248);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+    .project-thumbnail {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #1a1d29;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      text-align: center;
+      color: #eaeaea;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    }
+    .modal-content h3 {
+      margin-bottom: 1rem;
+    }
+    .modal-close {
+      margin-top: 1.5rem;
+      background: #f06292;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Avani Agarwal</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Scientist. Strategist. Storyteller.</h1>
+    <p>Hi, I’m Avani — a high school researcher, entrepreneur, and global youth leader reshaping healthcare, AI, and education through science and compassion.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m currently a senior at G.D. Goenka Public School and the Co-CEO & CTO of Synthera, an AI-powered drug discovery company undergoing early testing at Harvard Med and MGH. I've led global health initiatives at Harvard, conducted neuroscience research at Yale, and created platforms to make science accessible. From kickboxing championships to proteomic pipelines, my work is fueled by a mission to bridge impact and innovation.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card"><strong>Synthera – Co-CEO & CTO</strong> (2024–Present)<br>Built BindAI, formed institutional partnerships, and deployed AI models for predictive biomedicine.</div>
+    <div class="card"><strong>Harvard College VISION – Global Youth Health Leader</strong> (2024)<br>Spearheaded youth-centered public health solutions across global contexts.</div>
+    <div class="card"><strong>Youth Biomechanics Institute – R&D Director</strong><br>Created low-cost prosthetics, VR rehab tools, and elderly fall-prevention systems.</div>
+    <div class="card"><strong>World Health Institute (FHI) – R&D Director</strong><br>Directed food and environmental health research with policy impact.</div>
+    <div class="card"><strong>Crimson Education – Ambassador</strong><br>Promoted global student access and mentorship.</div>
+    <div class="card"><strong>Perrin Institute – Policy Researcher</strong><br>Contributing to UNICEF AI governance frameworks.</div>
+    <div class="card"><strong>Beyond Class Insights – Founder & CEO</strong><br>Founded a tutoring company emphasizing creativity and student empowerment.</div>
+    <div class="card"><strong>Byteverse – Outreach Manager</strong><br>Led coding education outreach via events, content, and digital campaigns.</div>
+    <div class="card"><strong>Other Roles</strong>: Lightbulb Tutoring (Tutor), The Lady Code (Researcher), Space Technology & Aeronautics (Intern)</div>
+  </section>
+
+  <section id="research">
+    <h2>Research Projects</h2>
+    <div class="project-grid">
+  <div class="project-card">
+    <img src="https://raw.githubusercontent.com/openai/openai-assets/main/projects/multiomics.jpg" alt="AI Multi-Omics" class="project-thumbnail">
+    <h3>AI Multi-Omics for Pediatric Cancer</h3>
+    <p>Built a predictive pipeline integrating genomic, proteomic, and transcriptomic layers to personalize antibiotic resistance insights in pediatric oncology.</p>
+  </div>
+  <div class="project-card">
+    <img src="https://raw.githubusercontent.com/openai/openai-assets/main/projects/neurexin.jpg" alt="Neurexin AlphaSyn" class="project-thumbnail">
+    <h3>Neurexin-1 & Alpha-Synuclein Study</h3>
+    <p>Used AlphaFold models and binding dynamics simulations to explore neurodegenerative disease mechanisms involving Neurexin-1 and synuclein fibrils.</p>
+  </div>
+  <div class="project-card">
+    <img src="https://raw.githubusercontent.com/openai/openai-assets/main/projects/parkinsons.jpg" alt="Parkinson’s Proteomics" class="project-thumbnail">
+    <h3>Proteomics in Parkinson’s Disease</h3>
+    <p>Supported by Yale University labs, this project applied mass-spec analytics to uncover novel protein markers in PD-affected brain tissue.</p>
+  </div>
+  <div class="project-card">
+    <img src="https://raw.githubusercontent.com/openai/openai-assets/main/projects/quantum-brain.jpg" alt="Quantum Coherence" class="project-thumbnail">
+    <h3>Quantum Coherence in Neural Networks</h3>
+    <p>Exploring quantum mechanical models for neurotransmitter signaling and implications for consciousness studies using Qutip and NEURON.</p>
+  </div>
+  <div class="project-card">
+    <img src="https://raw.githubusercontent.com/openai/openai-assets/main/projects/neuroimaging.jpg" alt="Quantum Dots Imaging" class="project-thumbnail">
+    <h3>Quantum Dot Enhanced Neuroimaging</h3>
+    <p>Engineered an ML-enhanced platform to visualize and assess real-time brainwave patterns and compound toxicity with quantum dots.</p>
+  </div>
+  <div class="project-card">
+    <img src="https://raw.githubusercontent.com/openai/openai-assets/main/projects/dementia.jpg" alt="Dementia Clearance" class="project-thumbnail">
+    <h3>Sleep-Driven Brain Clearance</h3>
+    <p>Simulation studies of the glymphatic system’s disruption and its cascading effect on amyloid-beta build-up in dementia.</p>
+  </div>
+  <div class="project-card">
+    <img src="https://raw.githubusercontent.com/openai/openai-assets/main/projects/food-waste.jpg" alt="Food Waste Metagenomics" class="project-thumbnail">
+    <h3>Food Waste Prevention with Metagenomics</h3>
+    <p>Analyzed microbiome data from agricultural waste sites to identify genomic indicators of spoilage and propose scalable interventions.</p>
+  </div>
+  <div class="project-card">
+    <img src="https://raw.githubusercontent.com/openai/openai-assets/main/projects/amyloid.jpg" alt="Amyloid Modeling" class="project-thumbnail">
+    <h3>Modeling Amyloid Proteins in Alzheimer’s</h3>
+    <p>Created visual models of fibril structures using PyMOL and Discovery Studio to simulate interaction with neural tissue.</p>
+  </div>
+</div>
+      <div class="project-card">
+  <img src="https://via.placeholder.com/300x180" alt="Neurexin AlphaSyn" class="project-thumbnail">
+  <h3>Neurexin-1 & Alpha-Synuclein Study</h3>
+  <p>Protein-protein interaction research at Yale to study neurodegeneration mechanisms.</p>
+</div>
+    </div>
+
+    
+    </div>
+
+    
+    </div>
+    <h2>Research Projects</h2>
+    <div class="card"><strong>AI Multi-Omics for Pediatric Cancer</strong><br>Developed a predictive framework integrating genomics, proteomics, and transcriptomics.</div>
+    <div class="card"><strong>Alpha-Synuclein & Neurexin-1 (Yale)</strong><br>Protein-protein interaction modeling for synaptic dysfunctions.</div>
+    <div class="card"><strong>Proteomics for Parkinson’s Disease (Yale)</strong><br>Identifying biomarkers using mass spec analysis.</div>
+    <div class="card"><strong>Quantum Coherence in Neural Networks</strong><br>Exploring the role of quantum effects in neurotransmission.</div>
+    <div class="card"><strong>Neuroimaging with Quantum Dots</strong><br>Machine learning-powered toxicology platform with real-time imaging.</div>
+    <div class="card"><strong>Sleep Clearance in Dementia</strong><br>Modeling how disrupted sleep affects neurotoxic waste removal.</div>
+    <div class="card"><strong>Metagenomics to Prevent Food Waste</strong><br>Award-winning Borlaug Scholar project improving food production sustainability.</div>
+    <div class="card"><strong>Modeling Amyloid Proteins (Alzheimer’s)</strong><br>Using PyMOL and Discovery Studio to visualize and assess protein structures.</div>
+  </section>
+
+  <section id="leadership">
+    <h2>Leadership</h2>
+    <div class="card"><strong>Vice Head Girl</strong>, G.D. Goenka (2024–25)<br>Led student activities, mentored peers, and drove student-administration initiatives.</div>
+    <div class="card"><strong>Programming Head</strong>, NOVA – Led $10,000 grant-funded AI research team for pancreatic cancer.</div>
+    <div class="card"><strong>Editor-in-Chief</strong>, Youth Sciences Journal – Oversaw research publication and peer review.</div>
+    <div class="card"><strong>Junior Editor</strong>, Youth Scientists Journal</div>
+    <div class="card"><strong>Model UN – Core Secretariat</strong></div>
+    <div class="card"><strong>Teens Foundation – Delhi Secretary</strong></div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="card"><strong>💡 Youth in Research: Why Teen Scientists Matter</strong><br>A personal story about stepping into Yale’s labs as a high schooler, and what it taught me about age, access, and ambition.</div>
+    <div class="card"><strong>🧠 Can AI Decode the Brain?</strong><br>Reflections on quantum modeling in neuroscience and where consciousness research is headed.</div>
+    <div class="card"><strong>🌍 Health is Political: Thoughts from Harvard VISION</strong><br>Global health isn’t just about medicine — it's about equity, youth leadership, and listening deeply.</div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let’s connect and collaborate!</p>
+    <p><strong>Email:</strong> <a href="mailto:avanipersonal7@gmail.com">avanipersonal7@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/avani-agarwal-920a4b25b/" target="_blank">@avani-agarwal</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/avani89289" target="_blank">@avani89289</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Avani Agarwal. All rights reserved.</p>
+    <p>
+      <a href="mailto:avanipersonal7@gmail.com">Email</a> |
+      <a href="https://www.linkedin.com/in/avani-agarwal-920a4b25b/" target="_blank">LinkedIn</a> |
+      <a href="https://instagram.com/avani89289" target="_blank">Instagram</a>
+    </p>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card').forEach(card => {
+      card.classList.add('hidden');
+      observer.observe(card);
+    });
+  </script>
+  <style>
+    .hidden { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .visible { opacity: 1; transform: translateY(0); }
+  </style>
+<script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+</script>
+</body>
+</html>
